@@ -20,7 +20,8 @@ workflow {
     Channel.of([        
         "=== PARAMETERS ===",        
         // "Batch: ${batch_id}",        
-        "S3: ${params.s3_bucket}",        
+        "S3 param: ${params.s3_bucket}",
+        "S3 secret: ${secrets.s3_dev_bucket}"
         "API Get: ${params.api_link_get}",        
         "API Post: ${params.api_link_post}",        
         "Auth Key: '${params.api_auth_key }' (length: ${params.api_auth_key ?.length() ?: 'null'})",       
